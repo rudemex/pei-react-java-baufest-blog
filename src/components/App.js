@@ -2,7 +2,17 @@ import React from 'react';
 
 class App extends React.Component {
   render() {
-    return <p className="text">Hello world</p>;
+    return (
+      <div>
+        <p className="text">Hello world</p>
+        <p className="text-jsx">Hello world</p>
+        <style jsx>{`
+          .text-jsx {
+            color: blue;
+          }
+        `}</style>
+      </div>
+    );
   }
 }
 
