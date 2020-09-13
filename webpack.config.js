@@ -5,7 +5,11 @@ module.exports = {
   entry: path.resolve(__dirname, 'src/index.js'),
   output: {
     path: path.resolve(__dirname, 'dist'),
+    publicPath: 'http://localhost:8080/',
     filename: 'js/[name].js',
+  },
+  devServer: {
+    historyApiFallback: true
   },
   resolve: {
     extensions: ['.js', '.jsx'],
