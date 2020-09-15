@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import PostsList from '../components/PostsList/PostsList';
 class Blog extends Component {
   constructor(props) {
     super(props);
@@ -34,17 +34,7 @@ class Blog extends Component {
         <h1>Blog</h1>
 
         <div className="content-list-of-posts">
-          <ul>
-            {posts &&
-              posts.map((post) => (
-                <li key={post.id}>
-                  <div>
-                    <h4>{post.title}</h4>
-                    <p>{post.body}</p>
-                  </div>
-                </li>
-              ))}
-          </ul>
+          <PostsList posts={posts}/>
         </div>
       </div>
     );
